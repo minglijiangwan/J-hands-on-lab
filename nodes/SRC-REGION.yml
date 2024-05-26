@@ -1,0 +1,63 @@
+steps:
+  REGION-b1f99c7f-d0e9-4f9c-a1d3-7044bf807da2:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: Region data as defined by TPC-H
+      locationName: SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a383d3c9-5d72-4cf1-85c4-d429b0b130c3
+              stepCounter: b1f99c7f-d0e9-4f9c-a1d3-7044bf807da2
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: R_REGIONKEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 18a67faf-f55e-4889-8412-cf4e73c5dc41
+              stepCounter: b1f99c7f-d0e9-4f9c-a1d3-7044bf807da2
+            config: {}
+            dataType: VARCHAR(25)
+            defaultValue: ""
+            description: ""
+            name: R_NAME
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2f393bd3-da88-4ef5-b802-790ecf74d81f
+              stepCounter: b1f99c7f-d0e9-4f9c-a1d3-7044bf807da2
+            config: {}
+            dataType: VARCHAR(152)
+            defaultValue: ""
+            description: ""
+            name: R_COMMENT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SRC', 'REGION') }}
+      name: REGION
+      schema: ""
+      sqlType: Source
+      table: REGION
+      type: sourceInput
+    stepCounter: b1f99c7f-d0e9-4f9c-a1d3-7044bf807da2
